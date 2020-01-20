@@ -4,13 +4,14 @@ http://twitter4j.org/ja/index.html#howToUse
 
 ## 使いかた
 まずは、TwitterAccountの申請
+3~4時間かかりました。
 https://qiita.com/kngsym2018/items/2524d21455aac111cdee⁽1⁾  
-その後、アクセスtokenを取得する  
+その後、アクセスtokenを取得します。  
 
-Windows10 inteliJ Maven Java11を使用  
-inteliJでFile->New->Projectでmavenを選ぶnext  
+Windows10 inteliJ Maven Java11を使用します。  
+inteliJでFile->New->Projectでmavenを選びます。next  
 GroupId ArtifactIdを決めてnext ProjectNameを決めてFinish  
-src->main->javaにmainクラスを適当な名前で作る。このrepositoryではTweetクラス  
+src->main->javaにmainクラスを適当な名前で作ります。このrepositoryではTweetクラスです。  
 
 ### mavenに追加
 ```<dependencies>
@@ -43,6 +44,7 @@ public static void main(String[] args) {
 ```
 
 ""で囲まれている部分にtokenを記入  
+上記tokenは自分が適当に打ち込みました。  
 ビルドで自分のtwitterで確認する。  
 ## 参考資料  
 (1)Twitter API 登録 (アカウント申請方法) から承認されるまでの手順まとめ　※2019年8月時点の情報　Qiita  
