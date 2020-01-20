@@ -5,5 +5,28 @@ import twitter4j.conf.ConfigurationBuilder;
 
 public class Sub {
 
+    public Twitter twitter;
 
+    public void doHogeHoge() {
+        getTwitter();
+        try {
+            //先頭に#でハッシュタグ
+            twitter.updateStatus("#"+"てすと");
+        }catch (TwitterException e){
+            e.printStackTrace();
+        }
+    }
+
+    public void getTwitter () {
+        if (twitter == null) {
+            ConfigurationBuilder cb = new ConfigurationBuilder();
+            cb.setDebugEnabled(true)
+                    .setOAuthConsumerKey("dayQHbvKvSd5SpiyD5K6JwKLM")
+                    .setOAuthConsumerSecret("zMHk7665aZmimU7SdGVAsOMLyvFJuACoWOVatvuxUj5cdQFxSD")
+                    .setOAuthAccessToken("1051757940879765504-p0URTijS6VhCFCf8BO8X3UFQI5z8Ff")
+                    .setOAuthAccessTokenSecret("Avu95L2CimMA8Zhg7XJOnoxPbSyyJ1M5hKjYxewMxzjUw");
+            TwitterFactory tf = new TwitterFactory(cb.build());
+            twitter = tf.getInstance();
+        }
+    }
 }
